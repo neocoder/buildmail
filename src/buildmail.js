@@ -477,10 +477,10 @@ MimeNode.prototype.buildHeaders = function() {
                     // we can't build the value with buildHeaderValue as the value is non standard and
                     // would be converted to parameter continuation encoding that we do not want
                     param = libmime.encodeWords(_self.filename, 'Q', 52);
-                    if (param !== _self.filename || /[\s"=;]/.test(param)) {
+                    //if (param !== _self.filename || /[\s"=;]/.test(param)) {
                         // include value in quotes if needed
                         param = '"' + param + '"';
-                    }
+                    //}
                     value += '; name=' + param;
                 }
                 break;
